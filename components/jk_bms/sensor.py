@@ -5,22 +5,26 @@ from esphome.const import (
     CONF_CURRENT,
     CONF_POWER,
     DEVICE_CLASS_CURRENT,
-    DEVICE_CLASS_EMPTY,
     DEVICE_CLASS_POWER,
     DEVICE_CLASS_TEMPERATURE,
     DEVICE_CLASS_VOLTAGE,
     ICON_COUNTER,
-    ICON_EMPTY,
     ICON_TIMELAPSE,
     STATE_CLASS_MEASUREMENT,
     STATE_CLASS_TOTAL_INCREASING,
     UNIT_AMPERE,
     UNIT_CELSIUS,
-    UNIT_EMPTY,
     UNIT_PERCENT,
     UNIT_VOLT,
     UNIT_WATT,
 )
+
+# Ported to ESPHome 2026.x: UNIT_EMPTY / ICON_EMPTY / DEVICE_CLASS_EMPTY were removed
+# from esphome.const (all were the empty string). Define locally to keep the sensor
+# definitions below unchanged.
+UNIT_EMPTY = ""
+ICON_EMPTY = ""
+DEVICE_CLASS_EMPTY = ""
 
 from . import CONF_JK_BMS_ID, JkBms
 
